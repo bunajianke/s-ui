@@ -15,6 +15,10 @@ remain managed by S-UI. This customization does not replace the proxy core.
   existing MagicNet subscription adapter is configured. Generic installations retain
   the upstream subscription formats.
 - Advanced monitoring and desktop client tables remain available.
+- Simultaneous equivalent reads share one pending result instead of cancelling
+  each other. Mutating requests remain independent, and explicit cancellation
+  does not create a misleading failure toast. Network/authentication failures
+  are still reported normally.
 
 Account traffic is S-UI's existing upload + download counters, with each account's
 own reset cycle. It is **not** the provider's billable monthly usage.
